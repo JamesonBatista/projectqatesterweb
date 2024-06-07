@@ -3,9 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const alertMessage = document.getElementById('alertMessage');
     const closeAlert = document.getElementById('closeAlert');
 
-    closeAlert.addEventListener('click', function () {
-        window.location.href = 'lista-usuarios.html';
-    });
+    console.log('customAlert:', customAlert);
+    console.log('alertMessage:', alertMessage);
+    console.log('closeAlert:', closeAlert);
+
+    if (closeAlert) {
+        closeAlert.addEventListener('click', function () {
+            window.location.href = 'lista-usuarios.html';
+        });
+    }
 
     window.showAlert = function (message) {
         alertMessage.textContent = message;
