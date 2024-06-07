@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <link rel="stylesheet" href="css/carros.css">
+</head>
+<body>
+    <div class="carros-container">
+        <h2>Lista de Carros</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Placa</th>
+                    <th>Chassi</th>
+                </tr>
+            </thead>
+            <tbody id="carros-lista">
+                <!-- Carros serão adicionados aqui -->
+            </tbody>
+        </table>
+        <div class="carros-form">
+            <h3>Adicionar Novo Carro</h3>
+            <form id="carrosForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+                <label for="ano">Ano:</label>
+                <input type="number" id="ano" name="ano" required>
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" name="placa" required>
+                <label for="chassi">Chassi:</label>
+                <input type="text" id="chassi" name="chassi" required>
+            </form>
+            <button type="button" id="buttonCarros">Adicionar Carro</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carrosForm = document.getElementById('carrosForm');
+            const carrosLista = document.getElementById('carros-lista');
+            const buttonCarros = document.getElementById('buttonCarros');
+
+            buttonCarros.addEventListener('click', () => {
+                const nome = document.getElementById('nome').value;
+                const modelo = document.getElementById('modelo').value;
+                const ano = document.getElementById('ano').value;
+                const placa = document.getElementById('placa').value;
+                const chassi = document.getElementById('chassi').value;
+
+                if (!nome || !modelo || !ano || !placa || !chassi) {
+                    alert('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${nome}</td>
+                    <td>${modelo}</td>
+                    <td>${ano}</td>
+                    <td>${placa}</td>
+                    <td>${chassi}</td>
+                `;
+                carrosLista.appendChild(row);
+                carrosForm.reset();
+                alert('Carro adicionado com sucesso!');
+            });
+        });
+    </script>
+</body>
+</html>

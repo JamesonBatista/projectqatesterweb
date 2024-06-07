@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Validation</title>
+    <link rel="stylesheet" href="css/iframe.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="lista-usuarios.html">Lista de Usuários</a></li>
+                <li><a href="detalhes-usuario.html">Detalhes do Usuários</a></li>
+                <li><a href="iframe_carros.html">Iframe Carros Lista</a></li>
+                <li><a href="pizza.html">Pizzas</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <iframe src="iframe1.html" frameborder="0" class="iframe-layer"></iframe>
+    </div>
+    <div class="validation">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        <button onclick="validate()">Validar</button>
+    </div>
+
+    <script>
+        function validate() {
+            const name = document.getElementById('name').value;
+            if (name) {
+                alert(`Parabéns, ${name}! Você conseguiu validar.`);
+            } else {
+                alert('Por favor, insira seu nome.');
+            }
+        }
+    </script>
+</body>
+</html>
+

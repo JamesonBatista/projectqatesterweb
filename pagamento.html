@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="css/pagamento.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="pizza.html">Pizza</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Pagamento</h1>
+        <div class="pagamento-container">
+            <h2>Total a Pagar: R$<span id="total"></span></h2>
+            <form id="pagamentoForm">
+                <label for="nome">Nome no Cartão:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="numero">Número do Cartão:</label>
+                <input type="text" id="numero" name="numero" required>
+                <label for="validade">Validade:</label>
+                <input type="text" id="validade" name="validade" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <button type="submit">Pagar</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalElement = document.getElementById('total');
+            const total = sessionStorage.getItem('total');
+            totalElement.textContent = total ? total : '0.00';
+        });
+    </script>
+</body>
+</html>

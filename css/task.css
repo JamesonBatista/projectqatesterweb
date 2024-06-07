@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    background-color: #0b0b0c61;
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 10px -10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.task-creator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-creator h3 {
+    margin-top: 0;
+	color: black;
+}
+.task-creator label {
+    margin-top: 0;
+	color: black;
+}
+.task-creator form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.task-creator form input,
+.task-creator form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-creator form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-creator form button:hover {
+    background-color: #0056b3;
+}
+
+.task {
+    background-color: #2ccff0ae;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.task h4 {
+	color: white;
+}
+.task p {
+	color: white;
+}
+
+.task:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.task select {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
