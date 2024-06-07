@@ -47,7 +47,7 @@ let pizzaJson = [
   {
     id: 6,
     name: "Moda da Casa",
-    img: "../images/pizza6.png",
+    img: "images/pizza6.png",
     price: 18.55,
     sizes: ["320g", "530g", "860g"],
     description:
@@ -65,7 +65,7 @@ let pizzaJson = [
   {
     id: 8,
     name: "Hamgurguer",
-    img: "../images/hamburguer.png",
+    img: "images/hamburguer.png",
     price: 35.00,
     sizes: ["320g", "530g", "860g"],
     description:
