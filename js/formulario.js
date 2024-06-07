@@ -488,245 +488,246 @@ document.addEventListener("DOMContentLoaded", function () {
       "Pesqueira",
     ],
     pi: [
-        "Teresina",
-        "Parnaíba",
-        "Picos",
-        "Piripiri",
-        "Floriano",
-        "Barras",
-        "Campo Maior",
-        "Barras",
-        "Altos",
-        "União",
-        "Esperantina",
-        "José de Freitas",
-        "Pedro II",
-        "Luzilândia",
-        "Oeiras",
-        "Valença do Piauí",
-        "Miguel Alves",
-        "Piracuruca",
-        "São Raimundo Nonato",
-        "Campo Maior"
+      "Teresina",
+      "Parnaíba",
+      "Picos",
+      "Piripiri",
+      "Floriano",
+      "Barras",
+      "Campo Maior",
+      "Barras",
+      "Altos",
+      "União",
+      "Esperantina",
+      "José de Freitas",
+      "Pedro II",
+      "Luzilândia",
+      "Oeiras",
+      "Valença do Piauí",
+      "Miguel Alves",
+      "Piracuruca",
+      "São Raimundo Nonato",
+      "Campo Maior",
     ],
     rj: [
-        "Rio de Janeiro",
-        "São Gonçalo",
-        "Duque de Caxias",
-        "Nova Iguaçu",
-        "Niterói",
-        "Belford Roxo",
-        "Campos dos Goytacazes",
-        "São João de Meriti",
-        "Petrópolis",
-        "Volta Redonda",
-        "Magé",
-        "Itaboraí",
-        "Macaé",
-        "Cabo Frio",
-        "Angra dos Reis",
-        "Nova Friburgo",
-        "Barra Mansa",
-        "Teresópolis",
-        "Mesquita",
-        "Nilópolis"
+      "Rio de Janeiro",
+      "São Gonçalo",
+      "Duque de Caxias",
+      "Nova Iguaçu",
+      "Niterói",
+      "Belford Roxo",
+      "Campos dos Goytacazes",
+      "São João de Meriti",
+      "Petrópolis",
+      "Volta Redonda",
+      "Magé",
+      "Itaboraí",
+      "Macaé",
+      "Cabo Frio",
+      "Angra dos Reis",
+      "Nova Friburgo",
+      "Barra Mansa",
+      "Teresópolis",
+      "Mesquita",
+      "Nilópolis",
     ],
     rn: [
-        "Natal",
-        "Mossoró",
-        "Parnamirim",
-        "São Gonçalo do Amarante",
-        "Macaíba",
-        "Ceará-Mirim",
-        "Caicó",
-        "Açu",
-        "Currais Novos",
-        "São José de Mipibu",
-        "Nova Cruz",
-        "Touros",
-        "Apodi",
-        "João Câmara",
-        "Santa Cruz",
-        "Canguaretama",
-        "Pau dos Ferros",
-        "Nísia Floresta",
-        "Goianinha",
-        "Areia Branca"
+      "Natal",
+      "Mossoró",
+      "Parnamirim",
+      "São Gonçalo do Amarante",
+      "Macaíba",
+      "Ceará-Mirim",
+      "Caicó",
+      "Açu",
+      "Currais Novos",
+      "São José de Mipibu",
+      "Nova Cruz",
+      "Touros",
+      "Apodi",
+      "João Câmara",
+      "Santa Cruz",
+      "Canguaretama",
+      "Pau dos Ferros",
+      "Nísia Floresta",
+      "Goianinha",
+      "Areia Branca",
     ],
     rs: [
-        "Porto Alegre",
-        "Caxias do Sul",
-        "Pelotas",
-        "Canoas",
-        "Santa Maria",
-        "Gravataí",
-        "Viamão",
-        "Novo Hamburgo",
-        "São Leopoldo",
-        "Rio Grande",
-        "Alvorada",
-        "Passo Fundo",
-        "Sapucaia do Sul",
-        "Uruguaiana",
-        "Santa Cruz do Sul",
-        "Cachoeirinha",
-        "Bagé",
-        "Bento Gonçalves",
-        "Erechim",
-        "Guaíba"
+      "Porto Alegre",
+      "Caxias do Sul",
+      "Pelotas",
+      "Canoas",
+      "Santa Maria",
+      "Gravataí",
+      "Viamão",
+      "Novo Hamburgo",
+      "São Leopoldo",
+      "Rio Grande",
+      "Alvorada",
+      "Passo Fundo",
+      "Sapucaia do Sul",
+      "Uruguaiana",
+      "Santa Cruz do Sul",
+      "Cachoeirinha",
+      "Bagé",
+      "Bento Gonçalves",
+      "Erechim",
+      "Guaíba",
     ],
     ro: [
-        "Porto Velho",
-        "Ji-Paraná",
-        "Ariquemes",
-        "Vilhena",
-        "Cacoal",
-        "Jaru",
-        "Rolim de Moura",
-        "Guajará-Mirim",
-        "Pimenta Bueno",
-        "Buritis",
-        "Machadinho d'Oeste",
-        "Ouro Preto do Oeste",
-        "Nova Mamoré",
-        "Espigão d'Oeste",
-        "Candeias do Jamari",
-        "Alta Floresta d'Oeste",
-        "Presidente Médici",
-        "Cujubim",
-        "São Miguel do Guaporé",
-        "Alto Paraíso"
+      "Porto Velho",
+      "Ji-Paraná",
+      "Ariquemes",
+      "Vilhena",
+      "Cacoal",
+      "Jaru",
+      "Rolim de Moura",
+      "Guajará-Mirim",
+      "Pimenta Bueno",
+      "Buritis",
+      "Machadinho d'Oeste",
+      "Ouro Preto do Oeste",
+      "Nova Mamoré",
+      "Espigão d'Oeste",
+      "Candeias do Jamari",
+      "Alta Floresta d'Oeste",
+      "Presidente Médici",
+      "Cujubim",
+      "São Miguel do Guaporé",
+      "Alto Paraíso",
     ],
     rr: [
-        "Boa Vista",
-        "Rorainópolis",
-        "Caracaraí",
-        "Mucajaí",
-        "Alto Alegre",
-        "Cantá",
-        "Pacaraima",
-        "Bonfim",
-        "Normandia",
-        "São Luiz",
-        "Uiramutã",
-        "Amajari",
-        "Iracema",
-        "Caroebe",
-        "São João da Baliza"
+      "Boa Vista",
+      "Rorainópolis",
+      "Caracaraí",
+      "Mucajaí",
+      "Alto Alegre",
+      "Cantá",
+      "Pacaraima",
+      "Bonfim",
+      "Normandia",
+      "São Luiz",
+      "Uiramutã",
+      "Amajari",
+      "Iracema",
+      "Caroebe",
+      "São João da Baliza",
     ],
     sc: [
-        "Florianópolis",
-        "Joinville",
-        "Blumenau",
-        "São José",
-        "Chapecó",
-        "Criciúma",
-        "Itajaí",
-        "Lages",
-        "Balneário Camboriú",
-        "Jaraguá do Sul",
-        "Palhoça",
-        "Brusque",
-        "Tubarão",
-        "Camboriú",
-        "Caçador",
-        "Gaspar",
-        "Concórdia",
-        "Rio do Sul",
-        "São Bento do Sul",
-        "Araranguá"
+      "Florianópolis",
+      "Joinville",
+      "Blumenau",
+      "São José",
+      "Chapecó",
+      "Criciúma",
+      "Itajaí",
+      "Lages",
+      "Balneário Camboriú",
+      "Jaraguá do Sul",
+      "Palhoça",
+      "Brusque",
+      "Tubarão",
+      "Camboriú",
+      "Caçador",
+      "Gaspar",
+      "Concórdia",
+      "Rio do Sul",
+      "São Bento do Sul",
+      "Araranguá",
     ],
     sp: [
-        "São Paulo",
-        "Campinas",
-        "Guarulhos",
-        "São Bernardo do Campo",
-        "Santo André",
-        "Osasco",
-        "São José dos Campos",
-        "Ribeirão Preto",
-        "Sorocaba",
-        "Mauá",
-        "São José do Rio Preto",
-        "Mogi das Cruzes",
-        "Santos",
-        "Diadema",
-        "Jundiaí",
-        "Piracicaba",
-        "Carapicuíba",
-        "Bauru",
-        "Itaquaquecetuba",
-        "São Vicente"
+      "São Paulo",
+      "Campinas",
+      "Guarulhos",
+      "São Bernardo do Campo",
+      "Santo André",
+      "Osasco",
+      "São José dos Campos",
+      "Ribeirão Preto",
+      "Sorocaba",
+      "Mauá",
+      "São José do Rio Preto",
+      "Mogi das Cruzes",
+      "Santos",
+      "Diadema",
+      "Jundiaí",
+      "Piracicaba",
+      "Carapicuíba",
+      "Bauru",
+      "Itaquaquecetuba",
+      "São Vicente",
     ],
     se: [
-        "Aracaju",
-        "Nossa Senhora do Socorro",
-        "Lagarto",
-        "Itabaiana",
-        "São Cristóvão",
-        "Estância",
-        "Tobias Barreto",
-        "Simão Dias",
-        "Nossa Senhora da Glória",
-        "Propriá",
-        "Itabaianinha",
-        "Capela",
-        "Canindé de São Francisco",
-        "Porto da Folha",
-        "Cristinápolis",
-        "Poço Verde",
-        "Monte Alegre de Sergipe",
-        "Carira",
-        "Riachão do Dantas",
-        "Neópolis"
+      "Aracaju",
+      "Nossa Senhora do Socorro",
+      "Lagarto",
+      "Itabaiana",
+      "São Cristóvão",
+      "Estância",
+      "Tobias Barreto",
+      "Simão Dias",
+      "Nossa Senhora da Glória",
+      "Propriá",
+      "Itabaianinha",
+      "Capela",
+      "Canindé de São Francisco",
+      "Porto da Folha",
+      "Cristinápolis",
+      "Poço Verde",
+      "Monte Alegre de Sergipe",
+      "Carira",
+      "Riachão do Dantas",
+      "Neópolis",
     ],
     to: [
-        "Palmas",
-        "Araguaína",
-        "Gurupi",
-        "Porto Nacional",
-        "Paraíso do Tocantins",
-        "Araguatins",
-        "Colinas do Tocantins",
-        "Guaraí",
-        "Tocantinópolis",
-        "Formoso do Araguaia",
-        "Miracema do Tocantins",
-        "Dianópolis",
-        "Augustinópolis",
-        "Taguatinga",
-        "Araguacema",
-        "Cristalândia",
-        "Xambioá",
-        "Tocantínia",
-        "Natividade",
-        "Miranorte"
+      "Palmas",
+      "Araguaína",
+      "Gurupi",
+      "Porto Nacional",
+      "Paraíso do Tocantins",
+      "Araguatins",
+      "Colinas do Tocantins",
+      "Guaraí",
+      "Tocantinópolis",
+      "Formoso do Araguaia",
+      "Miracema do Tocantins",
+      "Dianópolis",
+      "Augustinópolis",
+      "Taguatinga",
+      "Araguacema",
+      "Cristalândia",
+      "Xambioá",
+      "Tocantínia",
+      "Natividade",
+      "Miranorte",
     ],
   };
 
   const stateSelect = document.getElementById("state");
   const citySelect = document.getElementById("city");
+  if (stateSelect) {
+    stateSelect.addEventListener("change", function () {
+      const selectedState = stateSelect.value;
+      const cities = estadosECidades[selectedState];
 
-  stateSelect.addEventListener("change", function () {
-    const selectedState = stateSelect.value;
-    const cities = estadosECidades[selectedState];
+      citySelect.innerHTML = "";
 
-    citySelect.innerHTML = "";
-
-    if (cities) {
-      cities.forEach(function (city) {
+      if (cities) {
+        cities.forEach(function (city) {
+          const option = document.createElement("option");
+          option.value = city;
+          option.textContent = city;
+          citySelect.appendChild(option);
+        });
+      } else {
         const option = document.createElement("option");
-        option.value = city;
-        option.textContent = city;
+        option.value = "";
+        option.textContent = "Selecione um estado primeiro";
         citySelect.appendChild(option);
-      });
-    } else {
-      const option = document.createElement("option");
-      option.value = "";
-      option.textContent = "Selecione um estado primeiro";
-      citySelect.appendChild(option);
-    }
-  });
+      }
+    });
+  }
 
   const urlParams = new URLSearchParams(window.location.search);
   const index = urlParams.get("index");
@@ -759,27 +760,30 @@ document.addEventListener("DOMContentLoaded", function () {
     customAlert.style.display = "block";
   }
 
-  cadastroForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const formData = new FormData(cadastroForm);
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
+  if(cadastroForm){
+    cadastroForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const formData = new FormData(cadastroForm);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+  
+      let users = JSON.parse(localStorage.getItem("usuarios")) || [];
+  
+      if (index !== null) {
+        users[index] = data;
+      } else {
+        users.push(data);
+      }
+  
+      localStorage.setItem("usuarios", JSON.stringify(users));
+  
+      // Mostrar o alerta personalizado
+      showAlert("Cadastro realizado com sucesso!");
+      cadastroForm.reset();
     });
+  }
 
-    let users = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    if (index !== null) {
-      users[index] = data;
-    } else {
-      users.push(data);
-    }
-
-    localStorage.setItem("usuarios", JSON.stringify(users));
-
-    // Mostrar o alerta personalizado
-    showAlert("Cadastro realizado com sucesso!");
-    cadastroForm.reset();
-  });
 });
