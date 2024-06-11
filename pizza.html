@@ -1,118 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="css/pizza.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Sushis</title>
-    <link rel="stylesheet" href="css/sushi.css">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/pizzaIcon.png" />
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="lista-usuarios.html">Lista de Usuários</a></li>
-                <li><a href="task.html">Tasks</a></li>
-                <li><a href="iframe.html">Iframe Test</a></li>
-                <li><a href="iframe_carros.html">Iframe Carros Lista</a></li>
-                <li><a href="pizza.html">Pizzas</a></li>
-                <li><a href="sushi.html">Sushis</a></li>
-            </ul>
+            <a href="index.html" class="nav-button">Início</a>
         </nav>
         <div class="menu-openner"><span>0</span>🛒</div>
     </header>
 
-    <main>
-        <h1>Venda de Sushis</h1>
-        <div class="tab-container">
-            <ul class="tabs">
-                <li class="tab active" data-tab="makizushi">Makizushi (Rolos)</li>
-                <li class="tab" data-tab="nigirizushi">Nigirizushi (Bolinhas de Arroz)</li>
-            </ul>
-            <div class="tab-content active" id="makizushi">
-                <div class="sushi-list">
-                    <div class="sushi-item">
-                        <img src="sushi1.png" alt="Sushi 1">
-                        <h3>Sushi 1</h3>
-                        <p>Preço: R$ 10,00</p>
-                        <div class="quantity-control">
-                            <button class="decrease-quantity">-</button>
-                            <span class="quantity">1</span>
-                            <button class="increase-quantity">+</button>
-                        </div>
-                        <button class="add-to-cart" data-price="10">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="sushi-item">
-                        <img src="sushi2.png" alt="Sushi 2">
-                        <h3>Sushi 2</h3>
-                        <p>Preço: R$ 12,00</p>
-                        <div class="quantity-control">
-                            <button class="decrease-quantity">-</button>
-                            <span class="quantity">1</span>
-                            <button class="increase-quantity">+</button>
-                        </div>
-                        <button class="add-to-cart" data-price="12">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-content" id="nigirizushi">
-                <div class="sushi-list">
-                    <div class="sushi-item">
-                        <img src="sushi3.png" alt="Sushi 3">
-                        <h3>Sushi 3</h3>
-                        <p>Preço: R$ 15,00</p>
-                        <div class="quantity-control">
-                            <button class="decrease-quantity">-</button>
-                            <span class="quantity">1</span>
-                            <button class="increase-quantity">+</button>
-                        </div>
-                        <button class="add-to-cart" data-price="15">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="sushi-item">
-                        <img src="sushi4.png" alt="Sushi 4">
-                        <h3>Sushi 4</h3>
-                        <p>Preço: R$ 18,00</p>
-                        <div class="quantity-control">
-                            <button class="decrease-quantity">-</button>
-                            <span class="quantity">1</span>
-                            <button class="increase-quantity">+</button>
-                        </div>
-                        <button class="add-to-cart" data-price="18">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
+    <div class="models">
+        <!--pizza-item, modelo de estrutura que irá repetir mostrando as pizzas independente da quantidade-->
+        <div class="pizza-item">
+            <a href="">
+                <div class="pizza-item--img"><img src="" /></div>
+                <div class="pizza-item--add">+</div>
+            </a>
+            <div class="pizza-item--price">R$ --</div>
+            <div class="pizza-item--name">--</div>
+            <div class="pizza-item--desc">--</div>
+        </div>
+
+        <!--cart-item, modelo de estrutura que irá repetir mostrando os itens do carrinho independente da quantidade-->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
             </div>
         </div>
+    </div>
+
+    <main>
+        <!-- as pizzas serão listadas aqui, pizza-area-->
+        <div class="pizza-area"></div>
     </main>
 
     <aside>
         <div class="cart--area">
             <div class="menu-closer">❌</div>
-            <h1>Seu Carrinho</h1>
+            <h1>Suas Pizzas</h1>
             <div class="cart"></div>
             <div class="cart--details">
                 <div class="cart--totalitem subtotal">
                     <span>Subtotal</span>
-                    <span>R$ <span id="subtotal">0.00</span></span>
+                    <span>R$ --</span>
                 </div>
                 <div class="cart--totalitem desconto">
                     <span>Desconto (-10%)</span>
-                    <span>R$ <span id="desconto">0.00</span></span>
+                    <span>R$ --</span>
                 </div>
                 <div class="cart--totalitem total big">
                     <span>Total</span>
-                    <span>R$ <span id="total">0.00</span></span>
+                    <span>R$ --</span>
                 </div>
                 <div class="cart--finalizar">Finalizar a compra</div>
             </div>
         </div>
     </aside>
 
+    <div class="pizzaWindowArea">
+        <div class="pizzaWindowBody">
+            <div class="pizzaInfo--cancelMobileButton">Voltar</div>
+            <div class="pizzaBig"><img src="" /></div>
+            <div class="pizzaInfo">
+                <h1>--</h1>
+                <div class="pizzaInfo--desc">--</div>
+                <div class="pizzaInfo--sizearea">
+                    <div class="pizzaInfo--sector">Tamanho</div>
+                    <div class="pizzaInfo--sizes">
+                        <div data-key="0" class="pizzaInfo--size selected">PEQUENA <span>--</span></div>
+                        <div data-key="1" class="pizzaInfo--size">MÉDIO <span>--</span></div>
+                        <div data-key="2" class="pizzaInfo--size">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--pricearea">
+                    <div class="pizzaInfo--sector">Preço</div>
+                    <div class="pizzaInfo--price">
+                        <div class="pizzaInfo--actualPrice">R$ --</div>
+                        <div class="pizzaInfo--qtarea">
+                            <button class="pizzaInfo--qtmenos">-</button>
+                            <div class="pizzaInfo--qt">1</div>
+                            <button class="pizzaInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                <div class="pizzaInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+
     <div class="custom-alert" id="customAlert">
         <p>Seu pedido está sendo processado!</p>
         <button onclick="closeCustomAlert()">OK</button>
     </div>
 
-    <script src="sushi.js"></script>
+    <script type="text/javascript" src="pizzas.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        // ALERTA PERSONALIZADO E LIMPEZA DO CARRINHO
+        c('.cart--finalizar').addEventListener('click', () => {
+            // Mostrar o alerta personalizado
+            c('#customAlert').classList.add('show');
+
+            // Limpar os valores do carrinho
+            cart = [];
+            updateCart();
+        });
+
+        // Função para fechar o alerta personalizado
+        function closeCustomAlert() {
+            c('#customAlert').classList.remove('show');
+        }
+    </script>
 </body>
+
 </html>
