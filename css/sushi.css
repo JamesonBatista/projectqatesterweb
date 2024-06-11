@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Cor de fundo de segurança */
+    background-image: url('../background.avif.avif'); /* Substitua 'background.jpg' pelo nome correto do seu arquivo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu-openner {
+    font-size: 26px;
+    background-color: #a9dcff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-openner span {
+    margin-right: 10px;
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    
+}
+
+.tab-container {
+    margin: 20px;
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.tabs .tab {
+    background-color: #ddd;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.tabs .tab.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sushi-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.sushi-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.sushi-item h3 {
+    color: #333;
+}
+
+.sushi-item p {
+    color: #666;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantity-control button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-image: url('../background.avif.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+}
+
+aside.open {
+    right: 0;
+}
+
+.cart--area {
+    padding: 20px;
+}
+
+.menu-closer {
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.cart--item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart--item img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart--item-nome {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: white;
+}
+
+.cart--item--qtarea {
+    display: flex;
+    align-items: center;
+}
+
+.cart--item-qtmenos,
+.cart--item-qtmais {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.cart--item--qt {
+    width: 20px;
+    text-align: center;
+    color: white;
+}
+
+.cart--details {
+    margin-top: 20px;
+}
+
+.cart--totalitem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cart--totalitem.big {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart--finalizar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart--finalizar:hover {
+    background-color: #45a049;
+}
+
+/* Custom Alert */
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.custom-alert.show {
+    display: block;
+}

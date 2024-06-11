@@ -74,10 +74,19 @@ let pizzaJson = [
   {
     id: 9,
     name: "Batata Frita",
-    img: "images/batatafrita.png",
+    img: "images/batatafrita.webp",
     price: 15.00,
     sizes: ["320g", "530g", "860g"],
     description:
       "Descrição da pizza em mais de uma linha muito legal bem interessante",
   },
+  {
+    id: 10,
+    name: "Refrigerante",
+    img: "images/refrigerante.png",
+    price: 5.00,
+    sizes: ["300g", "500g", "1L"],
+    description:
+      "Descrição da pizza em mais de uma linha muito legal bem interessante",
+  }
 ];

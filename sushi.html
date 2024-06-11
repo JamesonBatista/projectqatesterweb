@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi</title>
+    <link rel="stylesheet" href="css/sushi.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="lista-usuarios.html">Lista de Usuários</a></li>
+                <li><a href="task.html">Tasks</a></li>
+                <li><a href="iframe.html">Iframe Test</a></li>
+                <li><a href="iframe_carros.html">Iframe Carros Lista</a></li>
+                <li><a href="pizza.html">Pizzas</a></li>
+            </ul>
+        </nav>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+
+    <main>
+        <h1>Cardápio</h1>
+        <div class="tab-container">
+            <ul class="tabs">
+                <li class="tab active" data-tab="nigiri-sushi">Nigiri Sushi</li>
+                <li class="tab" data-tab="hossomaki">Hossomaki</li>
+                <li class="tab" data-tab="temaki">Temaki</li>
+                <li class="tab" data-tab="uramaki">Uramaki</li>
+                <li class="tab" data-tab="futomaki">Futomaki</li>
+                <li class="tab" data-tab="hot-roll">Hot Roll</li>
+                <li class="tab" data-tab="sashimi">Sashimi</li>
+            </ul>
+            <div class="tab-content active" id="nigiri-sushi"></div>
+            <div class="tab-content" id="hossomaki"></div>
+            <div class="tab-content" id="temaki"></div>
+            <div class="tab-content" id="uramaki"></div>
+            <div class="tab-content" id="futomaki"></div>
+            <div class="tab-content" id="hot-roll"></div>
+            <div class="tab-content" id="sashimi"></div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Seu Carrinho</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ <span id="subtotal">0.00</span></span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto (-10%)</span>
+                    <span>R$ <span id="desconto">0.00</span></span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ <span id="total">0.00</span></span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="custom-alert" id="customAlert">
+        <p>Seu pedido está sendo processado!</p>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+
+    <script src="sushi.js"></script>
+</body>
+</html>
