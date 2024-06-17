@@ -751,6 +751,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const alertMessage = window.parent.document.getElementById("alertMessage");
   const closeAlert = window.parent.document.getElementById("closeAlert");
 
+if(closeAlert){
+  closeAlert.addEventListener("click", function () {
+    customAlert.style.display = "none";
+  });
+}
 
   function showAlert(message) {
     alertMessage.textContent = message;
