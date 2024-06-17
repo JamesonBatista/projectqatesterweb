@@ -751,11 +751,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const alertMessage = window.parent.document.getElementById("alertMessage");
   const closeAlert = window.parent.document.getElementById("closeAlert");
 
-if(closeAlert){
-  closeAlert.addEventListener("click", function () {
-    window.parent.location.href = "lista-usuarios.html";
-  });
-}
 
   function showAlert(message) {
     alertMessage.textContent = message;
