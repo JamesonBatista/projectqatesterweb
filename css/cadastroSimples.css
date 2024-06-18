@@ -70,59 +70,66 @@ nav ul li a:hover {
     color: #fff;
 }
 
-.cadastro-container {
-    background: rgba(255, 255, 255, 0.1);
+.form-container {
+    width: 100%;
+    max-width: 600px;
     padding: 2rem;
+    text-align: center;
+    margin-top: 70px; /* Ajuste a altura do header */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 600px;
-    height: 80%;
-    text-align: center;
-    margin-top: -40px; /* To ensure it doesn't overlap with the header */
 }
 
-.cadastro-container h1 {
-    margin-bottom: 2rem;
-    color: #fff;
-    font-size: 2.5rem;
+.input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.cadastro-iframe {
-    width: 100%;
-    height: 650px; /* Adjust height as needed */
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.custom-alert {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+.input-group label {
+    margin-bottom: 0.5rem;
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 1001;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.custom-alert button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #1c92d2;
-    color: white;
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.5rem;
     border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fbfbfb;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #ccc;
+}
+
+.input-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background: #1c92d2;
+    background: linear-gradient(to right, #f2fcfe, #1c92d2);
+    color: #fff;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.custom-alert button:hover {
-    background-color: #0b84a5;
+button:hover {
+    background: #0b84a5;
 }
 
+button:focus {
+    outline: none;
+}
