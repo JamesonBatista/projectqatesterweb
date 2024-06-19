@@ -30,6 +30,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -132,4 +133,25 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    nav ul li a {
+        padding: 10px 20px;
+    }
 }
