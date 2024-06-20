@@ -758,7 +758,7 @@ if(closeAlert){
 }
 
   function showAlert(message) {
-    alertMessage.textContent = message;
+    alertMessage.textContent = "Cadastro realizado com sucesso!";
     customAlert.style.display = "block";
   }
 
