@@ -758,8 +758,6 @@ if(closeAlert){
 }
 
 function showAlert(message) {
-  const alertMessage = window.parent.document.getElementById("alertMessage");
-  const customAlert = window.parent.document.getElementById("customAlert");
   if (alertMessage && customAlert) {
       console.log("Elementos encontrados, exibindo alerta");
       alertMessage.textContent = message;
@@ -771,23 +769,23 @@ function showAlert(message) {
 
   if(cadastroForm){
     cadastroForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+      // event.preventDefault();
   
-      const formData = new FormData(cadastroForm);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
+      // const formData = new FormData(cadastroForm);
+      // const data = {};
+      // formData.forEach((value, key) => {
+      //   data[key] = value;
+      // });
   
-      let users = JSON.parse(localStorage.getItem("usuarios")) || [];
+      // let users = JSON.parse(localStorage.getItem("usuarios")) || [];
   
-      if (index !== null) {
-        users[index] = data;
-      } else {
-        users.push(data);
-      }
+      // if (index !== null) {
+      //   users[index] = data;
+      // } else {
+      //   users.push(data);
+      // }
   
-      localStorage.setItem("usuarios", JSON.stringify(users));
+      // localStorage.setItem("usuarios", JSON.stringify(users));
   
       // Mostrar o alerta personalizado
       showAlert("Cadastro realizado com sucesso!");
