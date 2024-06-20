@@ -751,46 +751,52 @@ document.addEventListener("DOMContentLoaded", function () {
   const alertMessage = window.parent.document.getElementById("alertMessage");
   const closeAlert = window.parent.document.getElementById("closeAlert");
 
-if(closeAlert){
-  closeAlert.addEventListener("click", function () {
-    customAlert.style.display = "none";
-  });
-}
 
-function showAlert(message) {
-  if (alertMessage && customAlert) {
-      console.log("Elementos encontrados, exibindo alerta");
-      alertMessage.textContent = message;
-      customAlert.style.display = "block";
-  } else {
-      console.error("Elementos de alerta não encontrados.");
+  console.log(customAlert, alertMessage, closeAlert);  // Adicione este log para verificar se os elementos existem
+
+  if (closeAlert) {
+      closeAlert.addEventListener("click", function () {
+          if (customAlert) {
+              customAlert.style.display = "none";
+          }
+      });
   }
-}
 
-  if(cadastroForm){
-    cadastroForm.addEventListener("submit", function (event) {
-      // event.preventDefault();
-  
-      // const formData = new FormData(cadastroForm);
-      // const data = {};
-      // formData.forEach((value, key) => {
-      //   data[key] = value;
-      // });
-  
-      // let users = JSON.parse(localStorage.getItem("usuarios")) || [];
-  
-      // if (index !== null) {
-      //   users[index] = data;
-      // } else {
-      //   users.push(data);
-      // }
-  
-      // localStorage.setItem("usuarios", JSON.stringify(users));
-  
-      // Mostrar o alerta personalizado
-      showAlert("Cadastro realizado com sucesso!");
-      cadastroForm.reset();
-    });
+  function showAlert(message) {
+      if (alertMessage && customAlert) {
+          console.log("Elementos encontrados, exibindo alerta");
+          alertMessage.textContent = message;
+          customAlert.style.display = "block";
+      } else {
+          console.error("Elementos de alerta não encontrados.");
+      }
+  }
+
+  if (cadastroForm) {
+      cadastroForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          console.log("Formulário enviado, chamando showAlert");
+
+          const formData = new FormData(cadastroForm);
+          const data = {};
+          formData.forEach((value, key) => {
+              data[key] = value;
+          });
+
+          let users = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+          if (index !== null) {
+              users[index] = data;
+          } else {
+              users.push(data);
+          }
+
+          localStorage.setItem("usuarios", JSON.stringify(users));
+
+          // Mostrar o alerta personalizado
+          showAlert("Cadastro realizado com sucesso!");
+          cadastroForm.reset();
+      });
   }
 
 });
