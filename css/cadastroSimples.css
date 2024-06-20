@@ -135,22 +135,21 @@ button:focus {
 }
 
 .custom-alert {
-    display: none;
+    display: none; /* Inicialmente escondido */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 1001;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    z-index: 1000;
 }
+
 .custom-alert.show {
     display: block; /* Mostrar quando a classe 'show' é adicionada */
-    /* Outras regras de estilo */
 }
 
 .custom-alert button {

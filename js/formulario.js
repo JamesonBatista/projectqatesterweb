@@ -706,6 +706,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const stateSelect = document.getElementById("state");
   const citySelect = document.getElementById("city");
+
   if (stateSelect) {
     stateSelect.addEventListener("change", function () {
       const selectedState = stateSelect.value;
@@ -747,56 +748,54 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const cadastroForm = document.getElementById("cadastroForm");
-  const customAlert = window.parent.document.getElementById("customAlert");
-  const alertMessage = window.parent.document.getElementById("alertMessage");
-  const closeAlert = window.parent.document.getElementById("closeAlert");
+  const customAlert = document.getElementById("customAlert");
+  const alertMessage = document.getElementById("alertMessage");
+  const closeAlert = document.getElementById("closeAlert");
 
-
-  console.log(customAlert, alertMessage, closeAlert);  // Adicione este log para verificar se os elementos existem
+  console.log(customAlert, alertMessage, closeAlert); // Adicione este log para verificar se os elementos existem
 
   if (closeAlert) {
-      closeAlert.addEventListener("click", function () {
-          if (customAlert) {
-              customAlert.style.display = "none";
-          }
-      });
+    closeAlert.addEventListener("click", function () {
+      if (customAlert) {
+        customAlert.style.display = "none";
+      }
+    });
   }
 
   function showAlert(message) {
-      if (alertMessage && customAlert) {
-          console.log("Elementos encontrados, exibindo alerta");
-          alertMessage.textContent = message;
-          customAlert.style.display = "block";
-      } else {
-          console.error("Elementos de alerta não encontrados.");
-      }
+    if (alertMessage && customAlert) {
+      console.log("Elementos encontrados, exibindo alerta");
+      alertMessage.textContent = message;
+      customAlert.style.display = "block";
+    } else {
+      console.error("Elementos de alerta não encontrados.");
+    }
   }
 
   if (cadastroForm) {
-      cadastroForm.addEventListener("submit", function (event) {
-          event.preventDefault();
-          console.log("Formulário enviado, chamando showAlert");
+    cadastroForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      console.log("Formulário enviado, chamando showAlert");
 
-          const formData = new FormData(cadastroForm);
-          const data = {};
-          formData.forEach((value, key) => {
-              data[key] = value;
-          });
-
-          let users = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-          if (index !== null) {
-              users[index] = data;
-          } else {
-              users.push(data);
-          }
-
-          localStorage.setItem("usuarios", JSON.stringify(users));
-
-          // Mostrar o alerta personalizado
-          showAlert("Cadastro realizado com sucesso!");
-          cadastroForm.reset();
+      const formData = new FormData(cadastroForm);
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
       });
-  }
 
+      let users = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+      if (index !== null) {
+        users[index] = data;
+      } else {
+        users.push(data);
+      }
+
+      localStorage.setItem("usuarios", JSON.stringify(users));
+
+      // Mostrar o alerta personalizado
+      showAlert("Cadastro realizado com sucesso!");
+      cadastroForm.reset();
+    });
+  }
 });
