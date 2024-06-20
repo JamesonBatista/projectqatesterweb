@@ -133,3 +133,32 @@ button:hover {
 button:focus {
     outline: none;
 }
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1c92d2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-alert button:hover {
+    background-color: #0b84a5;
+}
