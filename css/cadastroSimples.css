@@ -148,6 +148,10 @@ button:focus {
     z-index: 1001;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+.custom-alert.show {
+    display: block; /* Mostrar quando a classe 'show' é adicionada */
+    /* Outras regras de estilo */
+}
 
 .custom-alert button {
     margin-top: 10px;
