@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,11 +71,11 @@ nav ul li a:hover {
 }
 
 .form-container {
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     padding: 2rem;
     text-align: center;
-    margin-top: 70px; /* Ajuste a altura do header */
+    margin-top: 100px; /* Ajuste a altura do header */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -87,6 +87,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left; /* Ajuste para alinhar à esquerda */
 }
 
 .input-group label {
@@ -115,6 +116,7 @@ nav ul li a:hover {
 }
 
 button {
+    width: 100%; /* Ajuste para ocupar toda a largura */
     padding: 0.5rem 2rem;
     border-radius: 5px;
     border: none;
@@ -148,6 +150,7 @@ button:focus {
     z-index: 1001;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
 .custom-alert.show {
     display: block; /* Mostrar quando a classe 'show' é adicionada */
     /* Outras regras de estilo */
@@ -165,4 +168,20 @@ button:focus {
 
 .custom-alert button:hover {
     background-color: #0b84a5;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        margin-top: 120px; /* Aumente a margem superior em telas menores */
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
