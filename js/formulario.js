@@ -758,11 +758,14 @@ if(closeAlert){
 }
 
 function showAlert(message) {
+  const alertMessage = window.parent.document.getElementById("alertMessage");
+  const customAlert = window.parent.document.getElementById("customAlert");
   if (alertMessage && customAlert) {
-    alertMessage.textContent = message;
-    customAlert.style.display = "block";
+      console.log("Elementos encontrados, exibindo alerta");
+      alertMessage.textContent = message;
+      customAlert.style.display = "block";
   } else {
-    console.error("Elementos de alerta não encontrados.");
+      console.error("Elementos de alerta não encontrados.");
   }
 }
 
