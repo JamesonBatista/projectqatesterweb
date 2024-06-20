@@ -757,10 +757,14 @@ if(closeAlert){
   });
 }
 
-  function showAlert(message) {
-    alertMessage.textContent = "Cadastro realizado com sucesso!";
+function showAlert(message) {
+  if (alertMessage && customAlert) {
+    alertMessage.textContent = message;
     customAlert.style.display = "block";
+  } else {
+    console.error("Elementos de alerta não encontrados.");
   }
+}
 
   if(cadastroForm){
     cadastroForm.addEventListener("submit", function (event) {
@@ -783,7 +787,7 @@ if(closeAlert){
       localStorage.setItem("usuarios", JSON.stringify(users));
   
       // Mostrar o alerta personalizado
-      alert("Cadastro Efetaudo")
+      showAlert("Cadastro realizado com sucesso!");
       cadastroForm.reset();
     });
   }
