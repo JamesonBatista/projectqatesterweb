@@ -783,7 +783,7 @@ if(closeAlert){
       localStorage.setItem("usuarios", JSON.stringify(users));
   
       // Mostrar o alerta personalizado
-      showAlert("Cadastro realizado com sucesso!");
+      alert("Cadastro Efetaudo")
       cadastroForm.reset();
     });
   }
