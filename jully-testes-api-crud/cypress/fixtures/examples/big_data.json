@@ -1,0 +1,16 @@
+
+{
+
+    "method": "GET",
+    "url": "http://demo7018197.mockable.io/",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "expects": [
+    { "path": "status", "eq": 200 },
+    { "path": "team", "eq": "John Doe" },
+    { "path": "features", "eq": "Premium Interior" },
+    { "path": "number", "eq": "123-456-7890" }
+  ]
+}
+

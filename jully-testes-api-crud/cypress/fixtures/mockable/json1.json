@@ -1,0 +1,16 @@
+
+{
+
+    "method": "GET",
+    "url": "https://demo8370198.mockable.io/",
+    "body": null,
+    "qs": null,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "expects": [
+    { "path": "status", "eq": 200 },
+    { "path": "street", "eq": "Gordon Russell 123" }
+  ]
+}
+

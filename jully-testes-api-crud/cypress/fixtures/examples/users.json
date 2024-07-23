@@ -1,0 +1,12 @@
+
+{
+    "method": "GET",
+    "url": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+    "body": null,
+    "qs": null,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "expects": [{ "path": "status", "eq": 200 }]
+}
+

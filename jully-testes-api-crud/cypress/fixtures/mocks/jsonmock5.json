@@ -1,0 +1,104 @@
+
+
+{
+  "intercept": {
+    "method": "GET",
+    "url": "/users/2"
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "users": [
+          {
+            "main": [
+              {
+                "intro": [
+                  {
+                    "title": "desafio",
+                    "description": "Impossível de validar"
+                  },
+                  {
+                    "primeira_camada": [
+                      {
+                        "segunda_camada": [
+                          {
+                            "title_segunda_camada": "difícil chegar aqui"
+                          },
+                          {
+                            "terceira_camada": [
+                              {
+                                "title_terceira_camada": "cada vez mais difícil"
+                              },
+                              {
+                                "quarta_camada": [
+                                  {
+                                    "title_quarta_camada": "complicando ainda mais"
+                                  },
+                                  {
+                                    "objeto_quarta_camada": {
+                                      "title": "as vezes a camada precisa de uns objetos pra complicar",
+                                      "objeto_dentro_de_objeto_da_quarta_camada": {
+                                        "title": "Ainda mais complicado, 2 objetos dentro de uma camada",
+                                        "terceiro_objeto_da_camada": "é impossível ter um json assim kkk"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "quinta_camada": [
+                                      {
+                                        "title": "depois da quarta-camada a quinta pode complicar mais ainda",
+                                        "intro_quinta_camada": [
+                                          {
+                                            "title": "essa intro complica mais ainda porque nasceu um array dentor de um objeto da quinta camada. Assim não dá."
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "sexta_camada": [
+                                          {
+                                            "title": "ah, sexta camada, normal, simples, sem complicações"
+                                          },
+                                          {
+                                            "intro_sexta_camada": {
+                                              "array_sexta_camada": [
+                                                {
+                                                  "title": "acima tem um array dentro de um objeto, que complicado"
+                                                },
+                                                {
+                                                  "objeto_sexta_camada": {
+                                                    "title": "segundo objeto da camada-array tem outro objeto dentro, impossível isso."
+                                                  }
+                                                },
+                                                {
+                                                  "title_sem_objeto": "Acho que 6 camadas são suficiente"
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "desafio": "Se desafie, valide todos os campos, entrando em todas as camadas, JSON praticamente impossível no mercado, mas vai te dar um conhecimento ABSURDO."
+      }
+    ],
+    "headers": { "Content-Type": "application/json" }
+  }
+}
+

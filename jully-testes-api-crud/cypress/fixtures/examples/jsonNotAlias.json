@@ -1,0 +1,11 @@
+
+{
+    "method": "GET",
+    "url": "https://reqres.in/api/users/2",
+    "body": null,
+    "qs": null,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "expects": [{ "path": "status", "eq": 200 }, { "path": "first_name" }]
+}

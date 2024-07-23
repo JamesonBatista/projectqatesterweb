@@ -69,6 +69,11 @@ nav ul li a:hover::before {
 nav ul li a:hover {
     color: #fff;
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu em telas menores que 768px */
+    }
+}
 
 main {
     margin-top: 100px; /* To ensure it doesn't overlap with the header */

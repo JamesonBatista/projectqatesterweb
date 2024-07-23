@@ -1,0 +1,15 @@
+
+{
+
+    "method": "GET",
+    "url": "https://demo8168190.mockable.io/",
+    "body": null,
+    "qs": null,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+  "expects": [
+    { "path": "status", "eq": 200 },
+    { "path": "Order", "eq": 2 }
+  ]
+}

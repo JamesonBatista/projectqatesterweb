@@ -44,6 +44,11 @@ nav ul li a:hover {
     background-color: #0056b3;
     border-radius: 5px;
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu em telas menores que 768px */
+    }
+}
 
 main {
     display: flex;

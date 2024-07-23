@@ -69,6 +69,11 @@ nav ul li a:hover::before {
 nav ul li a:hover {
     color: #fff;
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu em telas menores que 768px */
+    }
+}
 
 .cadastro-container {
     background: rgba(255, 255, 255, 0.1);

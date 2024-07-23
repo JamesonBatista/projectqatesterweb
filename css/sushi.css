@@ -43,6 +43,11 @@ header nav ul li a {
 header nav ul li a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu em telas menores que 768px */
+    }
+}
 
 .menu-openner {
     font-size: 26px;

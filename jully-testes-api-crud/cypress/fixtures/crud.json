@@ -1,0 +1,43 @@
+[
+  { "get": "swagger/clientes", "retryOnNetworkFailure": true },
+  {
+    "post": "swagger/clientes",
+    "status": 201,
+    "body": {
+      "nome": "faker.name",
+      "cpf": "faker.cpf",
+      "contato": {
+        "email": "user@example.com",
+        "telefone": "string",
+        "endereco": "string"
+      },
+      "bank": {
+        "credito": 7000,
+        "debito": 1000
+      }
+    },
+    "save": "id"
+  },
+  {
+    "get": "swagger/financiamento-produtos",
+    "save": { "path": "id", "eq": 2, "as": "id_product" }
+  },
+  {
+    "post": "swagger/emprestimo",
+    "status": 201,
+    "body": {
+      "id_cliente": "{id}",
+      "emprestimo": 500000
+    },
+    "save": "emprestimo_aprovado"
+  },
+  {
+    "post": "swagger/contratar-financiamento",
+    "body": {
+      "id_cliente": "{id}",
+      "id_produto": "{id_product}",
+      "code_emprestimo": "{emprestimo_aprovado}",
+      "receber_email": "batistadad0@gmail.com"
+    }
+  }
+]
