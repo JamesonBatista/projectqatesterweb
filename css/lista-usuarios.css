@@ -30,11 +30,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Isso vai garantir que os itens possam quebrar linha, se necessário */
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0 15px;
-    position: relative;
+    margin: 10px; /* Adiciona um espaço entre os itens para evitar sobreposição */
 }
 
 nav ul li a {
@@ -43,8 +44,11 @@ nav ul li a {
     font-weight: bold;
     position: relative;
     z-index: 1;
+    padding: 10px 20px; /* Aumenta o espaço dentro dos itens para mantê-los uniformes */
+    min-width: 120px; /* Define uma largura mínima para os itens */
+    text-align: center;
     transition: color 0.3s;
-    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 nav ul li a::before {
@@ -69,6 +73,7 @@ nav ul li a:hover::before {
 nav ul li a:hover {
     color: #fff;
 }
+
 @media (max-width: 768px) {
     nav ul {
         display: none; /* Oculta o menu em telas menores que 768px */

@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 0;
-    text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
@@ -30,11 +34,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Isso vai garantir que os itens possam quebrar linha, se necessário */
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0 15px;
-    position: relative;
+    margin: 10px; /* Adiciona um espaço entre os itens para evitar sobreposição */
 }
 
 nav ul li a {
@@ -43,8 +48,11 @@ nav ul li a {
     font-weight: bold;
     position: relative;
     z-index: 1;
+    padding: 10px 20px; /* Aumenta o espaço dentro dos itens para mantê-los uniformes */
+    min-width: 120px; /* Define uma largura mínima para os itens */
+    text-align: center;
     transition: color 0.3s;
-    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 nav ul li a::before {
@@ -69,12 +77,20 @@ nav ul li a:hover::before {
 nav ul li a:hover {
     color: #fff;
 }
+
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Oculta o menu em telas menores que 768px */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
 
+/* Container de cadastro */
 .cadastro-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -84,7 +100,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 600px;
     text-align: center;
-    margin-top: 80px; /* To ensure it doesn't overlap with the header */
+    margin-top: 100px; /* Ajustado para caber com o header */
 }
 
 .cadastro-container h1 {
@@ -95,7 +111,7 @@ nav ul li a:hover {
 
 .cadastro-iframe {
     width: 100%;
-    height: 70vh; /* Adjust height as needed for responsiveness */
+    height: 70vh; /* Altura ajustada para responsividade */
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -133,8 +149,12 @@ nav ul li a:hover {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .cadastro-container {
-        margin-top: 100px; /* Aumente a margem superior em telas menores */
-        padding: 1rem;
+        margin-top: 120px; /* Aumentada a margem superior em telas menores */
+        padding: 1.5rem;
+    }
+
+    .cadastro-iframe {
+        height: 60vh; /* Ajuste a altura do iframe em telas menores */
     }
 
     nav ul {
@@ -145,7 +165,28 @@ nav ul li a:hover {
         margin: 10px 0;
     }
 
+    nav ul li a {
+        font-size: 14px; /* Redução do tamanho da fonte */
+        padding: 8px 12px; /* Ajuste de padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .cadastro-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
     .cadastro-iframe {
-        height: 60vh; /* Ajuste a altura do iframe em telas menores */
+        height: 50vh; /* Altura do iframe para telas muito pequenas */
     }
 }

@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,13 +16,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 0;
-    text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
@@ -30,21 +36,24 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Mantém flexível para telas menores */
 }
 
 nav ul li {
-    margin: 0 15px;
-    position: relative;
+    margin: 0 10px;
+    position: relative; /* Para o hover antes */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    position: relative;
-    z-index: 1;
+    font-size: 16px;
     transition: color 0.3s;
     padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+    display: block;
 }
 
 nav ul li a::before {
@@ -70,6 +79,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* Estilos do container de login */
 .login-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 2rem;
@@ -79,7 +89,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    margin-top: 100px; /* To ensure it doesn't overlap with the header */
+    margin-top: 150px; /* Garantir que não sobreponha o header */
 }
 
 .login-container h1 {
@@ -90,6 +100,7 @@ nav ul li a:hover {
 
 .input-group {
     margin-bottom: 1.5rem;
+    text-align: left; /* Para alinhar à esquerda */
 }
 
 .input-group label {
@@ -122,6 +133,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    width: 100%; /* Botão ocupa toda a largura do form */
 }
 
 button:hover {
@@ -130,6 +142,11 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 p {
@@ -170,4 +187,31 @@ p a {
 
 .custom-alert button:hover {
     background-color: #ff0000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px 5px; /* Ajusta margens para telas menores */
+    }
+    nav ul li a {
+        font-size: 14px; /* Reduz tamanho da fonte */
+        padding: 8px 12px; /* Ajusta padding para telas menores */
+    }
+    .login-container {
+        max-width: 90%; /* Mais flexível em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Menu em coluna em telas muito pequenas */
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0; /* Espaçamento adequado entre itens em coluna */
+    }
+    .login-container h1 {
+        font-size: 2rem; /* Reduz título para se adequar ao tamanho da tela */
+    }
 }

@@ -1,22 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 0;
-    text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
@@ -30,11 +34,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Isso vai garantir que os itens possam quebrar linha, se necessário */
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0 15px;
-    position: relative;
+    margin: 10px; /* Adiciona um espaço entre os itens para evitar sobreposição */
 }
 
 nav ul li a {
@@ -43,8 +48,11 @@ nav ul li a {
     font-weight: bold;
     position: relative;
     z-index: 1;
+    padding: 10px 20px; /* Aumenta o espaço dentro dos itens para mantê-los uniformes */
+    min-width: 120px; /* Define uma largura mínima para os itens */
+    text-align: center;
     transition: color 0.3s;
-    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 nav ul li a::before {
@@ -69,18 +77,28 @@ nav ul li a:hover::before {
 nav ul li a:hover {
     color: #fff;
 }
+
+
+/* Menu escondido em telas menores */
 @media (max-width: 768px) {
     nav ul {
-        display: none; /* Oculta o menu em telas menores que 768px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
 
+/* Container do Formulário */
 .form-container {
     width: 90%;
     max-width: 600px;
     padding: 2rem;
     text-align: center;
-    margin-top: 100px; /* Ajuste a altura do header */
+    margin-top: 120px; /* Ajustado para caber com o header */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -92,7 +110,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: left; /* Ajuste para alinhar à esquerda */
+    text-align: left; /* Mantém alinhamento à esquerda */
 }
 
 .input-group label {
@@ -121,11 +139,10 @@ nav ul li a:hover {
 }
 
 button {
-    width: 100%; /* Ajuste para ocupar toda a largura */
-    padding: 0.5rem 2rem;
+    width: 100%; /* O botão ocupa toda a largura */
+    padding: 0.75rem;
     border-radius: 5px;
     border: none;
-    background: #1c92d2;
     background: linear-gradient(to right, #f2fcfe, #1c92d2);
     color: #fff;
     font-size: 1rem;
@@ -158,7 +175,6 @@ button:focus {
 
 .custom-alert.show {
     display: block; /* Mostrar quando a classe 'show' é adicionada */
-    /* Outras regras de estilo */
 }
 
 .custom-alert button {
@@ -178,8 +194,8 @@ button:focus {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .form-container {
-        margin-top: 120px; /* Aumente a margem superior em telas menores */
-        padding: 1rem;
+        margin-top: 140px; /* Ajuste para telas menores */
+        padding: 1.5rem;
     }
 
     nav ul {
@@ -188,5 +204,31 @@ button:focus {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Redução do tamanho da fonte */
+        padding: 8px 12px; /* Ajuste de padding para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .form-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.5rem; /* Ajuste para botões em telas menores */
     }
 }
