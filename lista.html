@@ -10,11 +10,11 @@
     <header>
         <nav>
             <ul>
-				<li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
                 <li><a href="cadastro-simples.html">Cadastro Simples</a></li>
-                <li><a href="detalhes-usuario.html">Detalhes do Usuários</a></li>
+                <li><a href="detalhes-usuario.html">Detalhes do Usuário</a></li>
                 <li><a href="task.html">Tasks</a></li>
                 <li><a href="iframe.html">Iframe Test</a></li>
                 <li><a href="iframe_carros.html">Iframe Carros Lista</a></li>
@@ -25,8 +25,10 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main style="display: flex; justify-content: space-between;">
+        <!-- Lista normal à esquerda -->
+        <section style="width: 45%;">
+            <h2>Lista Normal</h2>
             <ul class="item-list">
                 <li class="item">
                     <input type="checkbox" id="item1">
@@ -47,6 +49,12 @@
                     <p id="message3" class="hidden">Clicou no item 3</p>
                 </li>
             </ul>
+        </section>
+
+        <!-- Lista dentro de um iframe à direita -->
+        <section style="width: 45%;">
+            <h2>Lista no Iframe</h2>
+            <iframe src="lista-iframe.html" style="width: 200%; height: 400px; border: 1px solid black;"></iframe>
         </section>
     </main>
 

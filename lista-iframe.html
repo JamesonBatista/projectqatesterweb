@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens no Iframe</title>
+    <link rel="stylesheet" href="./css/lista.css"> <!-- Referência ao mesmo arquivo de estilos -->
+</head>
+<body>
+    <section>
+        <ul class="item-list">
+            <li class="item">
+                <input type="checkbox" id="iframe_item1">
+                <label for="iframe_item1">Item Iframe 1</label>
+                <button class="action-btn" onclick="showIframeMessage(1)">Clique aqui</button>
+                <p id="iframe_message1" class="hidden">Clicou no item Iframe 1</p>
+            </li>
+            <li class="item">
+                <input type="checkbox" id="iframe_item2">
+                <label for="iframe_item2">Item Iframe 2</label>
+                <button class="action-btn" onclick="showIframeMessage(2)">Clique aqui</button>
+                <p id="iframe_message2" class="hidden">Clicou no item Iframe 2</p>
+            </li>
+            <li class="item">
+                <input type="checkbox" id="iframe_item3">
+                <label for="iframe_item3">Item Iframe 3</label>
+                <button class="action-btn" onclick="showIframeMessage(3)">Clique aqui</button>
+                <p id="iframe_message3" class="hidden">Clicou no item Iframe 3</p>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        function showIframeMessage(itemNumber) {
+            // Esconde todas as mensagens dentro do iframe
+            document.querySelectorAll('.item p').forEach(p => p.classList.add('hidden'));
+
+            // Mostra a mensagem correspondente ao item clicado
+            document.getElementById(`iframe_message${itemNumber}`).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
