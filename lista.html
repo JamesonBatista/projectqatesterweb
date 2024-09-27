@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens</title>
+    <link rel="stylesheet" href="./css/lista.css"> <!-- Referência ao arquivo de estilos -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+				<li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="cadastro-simples.html">Cadastro Simples</a></li>
+                <li><a href="detalhes-usuario.html">Detalhes do Usuários</a></li>
+                <li><a href="task.html">Tasks</a></li>
+                <li><a href="iframe.html">Iframe Test</a></li>
+                <li><a href="iframe_carros.html">Iframe Carros Lista</a></li>
+                <li><a href="pizza.html">Pizzas</a></li>
+                <li><a href="sushi.html">Sushis</a></li>
+                <li><a href="chat.html">Chat - WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <ul class="item-list">
+                <li class="item">
+                    <input type="checkbox" id="item1">
+                    <label for="item1">Item 1</label>
+                    <button class="action-btn" onclick="showMessage(1)">Clique aqui</button>
+                    <p id="message1" class="hidden">Clicou no item 1</p>
+                </li>
+                <li class="item">
+                    <input type="checkbox" id="item2">
+                    <label for="item2">Item 2</label>
+                    <button class="action-btn" onclick="showMessage(2)">Clique aqui</button>
+                    <p id="message2" class="hidden">Clicou no item 2</p>
+                </li>
+                <li class="item">
+                    <input type="checkbox" id="item3">
+                    <label for="item3">Item 3</label>
+                    <button class="action-btn" onclick="showMessage(3)">Clique aqui</button>
+                    <p id="message3" class="hidden">Clicou no item 3</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function showMessage(itemNumber) {
+            // Esconde todas as mensagens
+            document.querySelectorAll('.item p').forEach(p => p.classList.add('hidden'));
+
+            // Mostra a mensagem correspondente ao item clicado
+            document.getElementById(`message${itemNumber}`).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
