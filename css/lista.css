@@ -1,57 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-header {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
+@import url(./base.css);
 
 /* Estilo para o conteúdo da lista */
 main {
     margin-top: 50px;
     text-align: center;
+    color: white;
 }
 
 .item-list {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Aba</title>
+    <link rel="stylesheet" href="./css/abrindo-aba.css"> <!-- Referência ao arquivo de estilos -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./support/header.html')
+                .then(response => response.text())
+                .then(data => document.querySelector('header').innerHTML = data);
+        });
+    </script>
+</head>
+
+<body>
+<header></header>
+
+    <main style="color: white;">
+        <section class="new-tab-section">
+            <h2>Bem-vindo à nova aba!</h2>
+            <button id="actionButton">Clique aqui</button>
+            <p id="message" class="hidden">Parabéns você interagiu com uma nova aba</p>
+        </section>
+    </main>
+    
+
+    <script>
+        // Script para exibir a mensagem ao clicar no botão
+        document.getElementById('actionButton').addEventListener('click', function() {
+            document.getElementById('message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

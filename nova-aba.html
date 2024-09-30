@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/nova-aba.css"> <!-- Referência ao arquivo de estilos -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./support/header.html')
+                .then(response => response.text())
+                .then(data => document.querySelector('header').innerHTML = data);
+        });
+    </script>
+</head>
+
+<body>
+<header></header>
+
+    <main>
+        <section class="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                <br>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <br>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Script para abrir nova aba ao clicar em "Entrar"
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do form
+            window.open('abrindo-aba.html', '_blank'); // Abre uma nova aba com nova-aba.html
+        });
+    </script>
+</body>
+</html>
