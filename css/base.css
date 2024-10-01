@@ -14,11 +14,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    overflow-x: hidden;
+    /* Evitar scroll horizontal */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 0;
     width: 100%;
@@ -28,52 +28,83 @@ header {
     z-index: 1000;
 }
 
-nav ul {
+button.menu-toggle {
+    background-color: #0f2027;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    width: 150px;
+    border-radius: 5px;
+}
+
+button.menu-toggle:hover {
+    background-color: #203a43;
+}
+
+nav.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 200px; /* Ajuste a largura conforme necessário */
+    max-height: 400px; /* Define um limite de altura */
+    opacity: 0;
+    overflow-y: auto; /* Permite rolagem quando a altura exceder o limite */
+    transition: opacity 0.4s ease;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+nav.menu.active {
+    opacity: 1;
+}
+
+nav.menu ul {
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Isso vai garantir que os itens possam quebrar linha, se necessário */
-    width: 100%;
+    flex-direction: column;
 }
 
-nav ul li {
-    margin: 10px; /* Adiciona um espaço entre os itens para evitar sobreposição */
+nav.menu ul li {
+    padding: 5px 0;
 }
 
-nav ul li a {
-    color: white;
+nav.menu ul li a {
     text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-    padding: 10px 20px; /* Aumenta o espaço dentro dos itens para mantê-los uniformes */
-    min-width: 120px; /* Define uma largura mínima para os itens */
+    color: white;
+    font-size: 1.1em;
+    display: block;
+    padding: 5px 10px;
     text-align: center;
-    transition: color 0.3s;
-    border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(0, 26, 255, 0.4), rgba(212, 205, 212, 0.4));
-    z-index: -1;
-    transition: transform 0.3s;
-    transform: scaleX(0);
-    transform-origin: left;
-    border-radius: 10px;
+nav.menu ul li a:hover {
+    background-color: #ff5722;
+    border-radius: 5px;
 }
 
-nav ul li a:hover::before {
-    transform: scaleX(1);
+
+
+
+
+ul.menu {
+    display: none;
+    /* Menu escondido por padrão */
 }
 
-nav ul li a:hover {
-    color: #fff;
+ul.menu.active {
+    display: block;
+    /* Mostra o menu quando a classe 'active' é adicionada */
+}
+
+.menu-toggle {
+    z-index: 1000;
+    /* Certifique-se de que o botão está no topo */
 }

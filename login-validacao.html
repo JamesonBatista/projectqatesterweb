@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - Teste</title>
+	<link rel="stylesheet" href="./css/login-validacao.css">
+</head>
+
+<body>
+	<header></header> <!-- O header será inserido aqui -->
+	<div class="login-container">
+		<div class="login-box">
+			<img src="./images/coca.png" alt="Logo" class="logo">
+			<h2>Login</h2>
+			<div class="credentials">
+				<p><strong>Username: Admin</strong></p>
+				<p><strong>Password: admin123</strong></p>
+			</div>
+			<form id="loginForm">
+				<div class="input-group">
+					<label for="username">Username</label>
+					<input type="text" id="username" placeholder="Username" required>
+				</div>
+				<div class="input-group">
+					<label for="password">Password</label>
+					<input type="password" id="password" placeholder="Password" required>
+				</div>
+				<button type="submit">Login</button>
+				<p class="forgot-password" id="forgotPassword">Forgot your password?</p>
+			</form>
+			<p id="loginMessage"></p>
+		</div>
+	</div>
+
+	<script>
+		// Carrega o conteúdo do header de outro arquivo
+		fetch('./support/header.html')
+			.then(response => response.text())
+			.then(data => {
+				document.querySelector('header').innerHTML = data; // Insere o conteúdo do header
+				
+				// Após o carregamento do header, anexe o evento de clique ao menu
+				const menuToggle = document.querySelector('.menu-toggle');
+				const menu = document.querySelector('nav.menu');
+
+				if (menuToggle && menu) {
+					menuToggle.addEventListener('click', () => {
+						menu.classList.toggle('active'); // Exibe ou esconde o menu
+					});
+				}
+			})
+			.catch(error => console.error('Erro ao carregar o header:', error))
+
+		// Redirecionar ao clicar em "Forgot your password?"
+		document.getElementById('forgotPassword').addEventListener('click', function () {
+			window.location.href = 'cadastro-simples.html'; // Redireciona para a página de recuperação de senha
+		});
+
+
+				// Simulação de login válido
+				const validUsername = 'Admin';
+		const validPassword = 'admin123';
+
+		document.getElementById('loginForm').addEventListener('submit', function (e) {
+			const username = document.getElementById('username').value;
+			const password = document.getElementById('password').value;
+			const message = document.getElementById('loginMessage');
+
+			if (username !== validUsername || password !== validPassword) {
+				e.preventDefault();  // Impede o redirecionamento em caso de login inválido
+				message.textContent = 'Usuário ou senha incorretos!';
+				message.style.color = 'red';
+			} else {
+				message.textContent = 'Login realizado com sucesso!';
+				message.style.color = 'green';
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe Validation</title>
     <link rel="stylesheet" href="css/iframe.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch('./support/header.html')
-                .then(response => response.text())
-                .then(data => document.querySelector('header').innerHTML = data);
-        });
-    </script>
+
 </head>
 
 <body>
@@ -35,6 +29,24 @@
             }
         }
     </script>
+        <script>
+            fetch('./support/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('header').innerHTML = data; // Insere o conteúdo do header
+    
+                    // Após o carregamento do header, anexe o evento de clique ao menu
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    const menu = document.querySelector('nav.menu');
+    
+                    if (menuToggle && menu) {
+                        menuToggle.addEventListener('click', () => {
+                            menu.classList.toggle('active'); // Exibe ou esconde o menu
+                        });
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar o header:', error))
+        </script>
 </body>
 </html>
 
