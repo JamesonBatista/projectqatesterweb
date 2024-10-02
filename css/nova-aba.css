@@ -1,5 +1,7 @@
 @import url(./base.css);
-
+main{
+    width: 300px;
+}
 .login-section {
     background-color: #fff;
     padding: 20px;
