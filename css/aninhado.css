@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url(./base.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    min-height: 100vh; /* Define a altura mínima da página */
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    flex-direction: column;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    padding-top: 50px; /* Compensa a altura do menu, ajustando o espaço do formulário */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    background-color: #203a43;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+}

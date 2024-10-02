@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Complexo</title>
+    <link rel="stylesheet" href="./css/aninhado.css">
+</head>
+<body>
+	<header></header>
+    <form id="complex-form">
+        <section>
+            <h2>Informações Pessoais</h2>
+            <div class="group">
+                <label for="first-name">Nome:</label>
+                <input type="text" id="cypress-start" name="firstName" required>
+            </div>
+            <div class="group">
+                <label for="last-name">Sobrenome:</label>
+                <input type="text" id="test-middle" name="lastName" required>
+            </div>
+            <div class="group">
+                <label for="email">Email:</label>
+                <input type="email" id="qa-end" name="email" required>
+            </div>
+            <div class="group">
+                <label for="password">Senha:</label>
+                <input type="password" id="automation-start" required>
+            </div>
+        </section>
+
+        <section>
+            <h2>Informações de Endereço</h2>
+            <fieldset>
+                <legend>Endereço Principal</legend>
+                <div class="group">
+                    <label for="street">Rua:</label>
+                    <input type="text" id="project-middle" name="street" required>
+                </div>
+                <div class="group">
+                    <label for="city">Cidade:</label>
+                    <input type="text" id="cypress-end" required>
+                </div>
+                <div class="group">
+                    <label for="state">Estado:</label>
+                    <select id="test-start" required>
+                        <option value="">Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="zip">CEP:</label>
+                    <input type="text" id="qa-middle" name="zip" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço Secundário (Opcional)</legend>
+                <div class="group">
+                    <label for="alt-street">Rua:</label>
+                    <input type="text" id="automation-end" name="altStreet">
+                </div>
+                <div class="group">
+                    <label for="alt-city">Cidade:</label>
+                    <input type="text" id="project-start">
+                </div>
+                <div class="group">
+                    <label for="alt-state">Estado:</label>
+                    <select id="cypress-middle" name="altState">
+                        <option value="">Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label for="alt-zip">CEP:</label>
+                    <input type="text" id="test-end">
+                </div>
+            </fieldset>
+        </section>
+
+        <section>
+            <h2>Informações de Pagamento</h2>
+            <div class="group">
+                <label for="cardname">Nome no Cartão:</label>
+                <input type="text" id="qa-start" name="cardName" required>
+            </div>
+            <div class="group">
+                <label for="cardnumber">Número do Cartão:</label>
+                <input type="text" id="automation-middle" required>
+            </div>
+            <div class="group">
+                <label for="expiration">Data de Expiração:</label>
+                <input type="month" id="project-end" required>
+            </div>
+            <div class="group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cypress-start" required>
+            </div>
+        </section>
+
+        <section>
+            <h2>Preferências</h2>
+            <div class="group">
+                <label for="news">Deseja receber novidades por e-mail?</label>
+                <input type="checkbox" id="test-middle">
+            </div>
+            <div class="group">
+                <label for="terms">Aceita os termos e condições?</label>
+                <input type="checkbox" id="qa-end" required>
+            </div>
+        </section>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        // Função para gerar números randômicos
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 10000);
+        }
+
+        // Função para atualizar IDs com números randômicos no início, meio ou fim
+        function updateIdsWithRandomNumbers() {
+            const startIds = document.querySelectorAll('[id$="-start"]');
+            const middleIds = document.querySelectorAll('[id$="-middle"]');
+            const endIds = document.querySelectorAll('[id$="-end"]');
+
+            // Adiciona número no início
+            startIds.forEach(element => {
+                const baseId = element.id.split('-')[0]; // Extrai a palavra base
+                element.id = `${baseId}${generateRandomNumber()}`; // Número no final
+            });
+
+            // Adiciona número no meio
+            middleIds.forEach(element => {
+                const baseId = element.id.split('-')[0];
+                element.id = `${generateRandomNumber()}${baseId}${generateRandomNumber()}`; // Número no meio
+            });
+
+            // Adiciona número no final
+            endIds.forEach(element => {
+                const baseId = element.id.split('-')[0];
+                element.id = `${generateRandomNumber()}${baseId}`; // Número no início
+            });
+        }
+
+        // Atualiza os IDs quando o DOM estiver carregado
+        document.addEventListener("DOMContentLoaded", function() {
+            updateIdsWithRandomNumbers();
+        });
+    </script>
+	    <script>
+			fetch('./support/header.html')
+				.then(response => response.text())
+				.then(data => {
+					document.querySelector('header').innerHTML = data; // Insere o conteúdo do header
+	
+					// Após o carregamento do header, anexe o evento de clique ao menu
+					const menuToggle = document.querySelector('.menu-toggle');
+					const menu = document.querySelector('nav.menu');
+	
+					if (menuToggle && menu) {
+						menuToggle.addEventListener('click', () => {
+							menu.classList.toggle('active'); // Exibe ou esconde o menu
+						});
+					}
+				})
+				.catch(error => console.error('Erro ao carregar o header:', error))
+		</script>
+</body>
+</html>
