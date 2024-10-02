@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const password = document.getElementById('password').value;
 
         if (validateEmail(email) && password) {
-            window.location.href = 'cadastro.html';
+            window.location.href = 'cadastro-simples.html';
         } else {
             showAlert('Por favor, insira um email válido e uma senha.');
         }
