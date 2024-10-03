@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
-
 </head>
 
 <body>
@@ -17,7 +16,7 @@
             <div class="input-group">
                 <label for="username">Email</label>
                 <input type="email" id="username" name="username" required placeholder="informe seu e-mail"
-                    autocomplete="off" value="">
+                    autocomplete="off">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -26,7 +25,9 @@
             <button type="submit">Login</button>
         </form>
         <p>Don't have an account? <a href="cadastro-simples.html">Sign up</a></p>
+        <p><a href="#" id="forgotPassword">Forgot your password?</a></p>
     </div>
+
     <div id="customAlert" class="custom-alert">
         <span id="alertMessage"></span>
         <button id="closeAlert">Close</button>
@@ -34,25 +35,26 @@
 
     <script src="js/login.js"></script>
     <script>
+        // Fetch header content
         fetch('./support/header.html')
             .then(response => response.text())
             .then(data => {
-                document.querySelector('header').innerHTML = data; // Insere o conteúdo do header
+                document.querySelector('header').innerHTML = data;
 
-                // Após o carregamento do header, anexe o evento de clique ao menu
+                // Add click event to menu toggle
                 const menuToggle = document.querySelector('.menu-toggle');
                 const menu = document.querySelector('nav.menu');
-
                 if (menuToggle && menu) {
                     menuToggle.addEventListener('click', () => {
-                        menu.classList.toggle('active'); // Exibe ou esconde o menu
+                        menu.classList.toggle('active');
                     });
                 }
             })
-            .catch(error => console.error('Erro ao carregar o header:', error))
-        // Redirecionar ao clicar em "Forgot your password?"
+            .catch(error => console.error('Erro ao carregar o header:', error));
+
+        // Redirection for "Forgot your password?"
         document.getElementById('forgotPassword').addEventListener('click', function () {
-            window.location.href = 'cadastro-simples.html'; // Redireciona para a página de recuperação de senha
+            window.location.href = 'cadastro-simples.html';
         });
     </script>
 </body>
