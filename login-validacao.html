@@ -6,6 +6,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login - Teste</title>
 	<link rel="stylesheet" href="./css/login-validacao.css">
+	<style>
+		/* CSS do card para login */
+		.message-card {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #f9f9f9;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+			z-index: 1000;
+			text-align: center;
+			width: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.message-card.hidden {
+			display: none;
+		}
+
+		.message-card.success {
+			background-color: #d4edda;
+			color: #155724;
+			border: 1px solid #c3e6cb;
+		}
+
+		.message-card.error {
+			background-color: #f8d7da;
+			color: #721c24;
+			border: 1px solid #f5c6cb;
+		}
+
+		.message-card button {
+			margin-top: 15px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: white;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+		.message-card button:hover {
+			background-color: #0056b3;
+		}
+	</style>
 </head>
 
 <body>
@@ -30,52 +81,51 @@
 				<button type="submit">Login</button>
 				<p class="forgot-password" id="forgotPassword">Forgot your password?</p>
 			</form>
-			<p id="loginMessage"></p>
 		</div>
 	</div>
 
-	<script>
-		// Carrega o conteúdo do header de outro arquivo
-		fetch('./support/header.html')
-			.then(response => response.text())
-			.then(data => {
-				document.querySelector('header').innerHTML = data; // Insere o conteúdo do header
-				
-				// Após o carregamento do header, anexe o evento de clique ao menu
-				const menuToggle = document.querySelector('.menu-toggle');
-				const menu = document.querySelector('nav.menu');
+	<!-- Card para mensagem -->
+	<div id="loginMessageCard" class="message-card hidden">
+		<p id="loginMessageText"></p>
+		<button id="loginMessageButton">OK</button>
+	</div>
 
-				if (menuToggle && menu) {
-					menuToggle.addEventListener('click', () => {
-						menu.classList.toggle('active'); // Exibe ou esconde o menu
-					});
-				}
-			})
-			.catch(error => console.error('Erro ao carregar o header:', error))
+	<script>
+		// Dados de login válidos
+		const validUsername = 'Admin';
+		const validPassword = 'admin123';
+
+		// Evento de envio do formulário
+		document.getElementById('loginForm').addEventListener('submit', function (e) {
+			e.preventDefault(); // Impede o envio padrão do formulário
+
+			const username = document.getElementById('username').value;
+			const password = document.getElementById('password').value;
+			const messageCard = document.getElementById('loginMessageCard');
+			const messageText = document.getElementById('loginMessageText');
+			const okButton = document.getElementById('loginMessageButton');
+
+			if (username === validUsername && password === validPassword) {
+				// Mensagem de sucesso
+				messageText.textContent = 'Login realizado com sucesso!';
+				messageCard.classList.remove('hidden', 'error');
+				messageCard.classList.add('success');
+			} else {
+				// Mensagem de erro
+				messageText.textContent = 'Usuário ou senha incorretos!';
+				messageCard.classList.remove('hidden', 'success');
+				messageCard.classList.add('error');
+			}
+
+			// Evento para fechar o card
+			okButton.onclick = () => {
+				messageCard.classList.add('hidden'); // Oculta o card
+			};
+		});
 
 		// Redirecionar ao clicar em "Forgot your password?"
 		document.getElementById('forgotPassword').addEventListener('click', function () {
 			window.location.href = 'cadastro-simples.html'; // Redireciona para a página de recuperação de senha
-		});
-
-
-				// Simulação de login válido
-				const validUsername = 'Admin';
-		const validPassword = 'admin123';
-
-		document.getElementById('loginForm').addEventListener('submit', function (e) {
-			const username = document.getElementById('username').value;
-			const password = document.getElementById('password').value;
-			const message = document.getElementById('loginMessage');
-
-			if (username !== validUsername || password !== validPassword) {
-				e.preventDefault();  // Impede o redirecionamento em caso de login inválido
-				message.textContent = 'Usuário ou senha incorretos!';
-				message.style.color = 'red';
-			} else {
-				message.textContent = 'Login realizado com sucesso!';
-				message.style.color = 'green';
-			}
 		});
 	</script>
 </body>
