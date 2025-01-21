@@ -752,7 +752,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const alertMessage = document.getElementById("alertMessage");
   const closeAlert = document.getElementById("closeAlert");
 
-  console.log(customAlert, alertMessage, closeAlert); // Adicione este log para verificar se os elementos existem
 
   if (closeAlert) {
     closeAlert.addEventListener("click", function () {

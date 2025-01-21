@@ -18,6 +18,7 @@ body {
 }
 
 main {
+    margin-top: 60px;
     display: flex;
     justify-content: space-around;
     padding: 20px;

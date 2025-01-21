@@ -17,6 +17,7 @@
 
 /* Container do Formulário */
 .form-container {
+    margin-top: 145px;
     width: 90%;
     max-width: 600px;
     padding: 2rem;
