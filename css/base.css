@@ -46,19 +46,20 @@ button.menu-toggle:hover {
 
 nav.menu {
     position: absolute;
-    top: 100%;
+    top: 50px; /* Ajuste a posição do menu */
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
-    width: 200px; /* Ajuste a largura conforme necessário */
-    max-height: 400px; /* Define um limite de altura */
+    width: 200px;
+    max-height: 0; /* O menu começa sem altura */
+    overflow: hidden;
     opacity: 0;
-    overflow-y: auto; /* Permite rolagem quando a altura exceder o limite */
-    transition: opacity 0.4s ease;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
     z-index: 999;
     border-radius: 5px;
 }
 
 nav.menu.active {
+    max-height: 400px; /* Define a altura quando ativado */
     opacity: 1;
 }
 
@@ -66,7 +67,7 @@ nav.menu ul {
     list-style-type: none;
     padding: 10px;
     margin: 0;
-    display: flex;
+    display: block;
     flex-direction: column;
 }
 
@@ -102,6 +103,7 @@ ul.menu.active {
     display: block;
     /* Mostra o menu quando a classe 'active' é adicionada */
 }
+
 
 .menu-toggle {
     z-index: 1000;
