@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #141E30, #243B55);
+    background: #333;
     color: #fff;
     overflow-x: hidden;
     position: relative;
